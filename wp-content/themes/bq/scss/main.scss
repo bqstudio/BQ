@@ -24,8 +24,7 @@ Text Domain: twentysixteen
   'components/_button',
   'components/_forms',
   'components/_posts',
-  'components/_animations',
-  'components/_breadcrumb';
+  'components/_animations';
 
 // Hero
 @import
@@ -42,19 +41,7 @@ Text Domain: twentysixteen
 
 // Blocks
 @import
-  'blocks/_videos',
   'blocks/_text_block',
-  'blocks/_gallery',
   'blocks/stay_informed',
   'blocks/image_with_text',
-  'blocks/our_partners',
-  'blocks/_contact',
-  'blocks/_buttons';
-
-  // Posts
-  @import
-  'posts/single_post',
-  'posts/_filter_post',
-  'posts/_featured_posts',
-  'posts/_item';
-
+  'blocks/_contact';
