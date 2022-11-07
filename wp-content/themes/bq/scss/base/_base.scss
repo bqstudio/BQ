@@ -177,9 +177,9 @@ strong * {
 .site-content {
   margin-top: 0;
 
-  @include responsive ('tablet-h') {
+  /*  @include responsive ('tablet-h') {
     margin-top: 114px;
-  }
+  } */
 }
 
 .mejs-overlay-button {

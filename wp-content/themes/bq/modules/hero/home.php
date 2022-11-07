@@ -24,6 +24,10 @@
         <?php echo ($title = get_field('title'))? '<div class="hero-home__big_text">'.$title.'</div>':''; ?>
         <?php echo ($description = get_field('description'))? '<div class="hero-home__bottom_text">'.$description.'</div>':''; ?>
       </div>
+      <div class="block-hidden">
+        <h2>Nosotros</h2>
+        <div>Hola somos una empresa joven con amplia experiencia en el desarrollo web. Creemos que hoy en día es fundamental tener un sitio online para potenciar tu emprendimiento, negocio o empresa y para eso estamos para acompañarte en este proceso, focalizando en posicionar tu marca en el mundo digital. </div>
+      </div>
     </div>
   </div>
 </section>
