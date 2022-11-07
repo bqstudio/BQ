@@ -17,7 +17,7 @@
         top: 50%;
         left: 50%;
         z-index: 4;
-        width: 350px;
+        width: 1024px;
         max-width: 100%;
         transform: translate(-50%, -50%);
         cursor: pointer;
@@ -31,9 +31,9 @@
             max-width: 100%;
             opacity: 0.8;
             border-radius: 10px;
-            transform: translateY(-95%) scale(0);
+            transform: translateY(-50%) scale(0);
             transition: all 1s ease;
-
+            
             h2 {
                 @include h4();
                 opacity: 1;
@@ -47,6 +47,7 @@
 
         &:hover .block-hidden {
             transform: translateY(10%) scale(1);
+           
         }
     }
     
@@ -72,7 +73,8 @@
         @include h4();
         color: $white;
         z-index: 10;
-
-      
+        width: fit-content;
+        text-align: center;
+        margin: 0 auto;
     }
 }

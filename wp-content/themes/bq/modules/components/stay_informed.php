@@ -1,6 +1,6 @@
 <section class="stay_informed">
     <?php get_template_part('modules/components/image',NULL,array('image' => get_field('image', 'options')) ); ?>
-    <div class="stay_informed__content">
+    <div class="stay_informed__content" data-aos="fade-right">
         <div class="container">
             <div class="stay_informed__text-cont">
                 <?php 

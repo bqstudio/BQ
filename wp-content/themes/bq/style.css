@@ -1769,7 +1769,7 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
   top: 50%;
   left: 50%;
   z-index: 4;
-  width: 350px;
+  width: 1024px;
   max-width: 100%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -1782,8 +1782,8 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
   max-width: 100%;
   opacity: 0.8;
   border-radius: 10px;
-  -webkit-transform: translateY(-95%) scale(0);
-          transform: translateY(-95%) scale(0);
+  -webkit-transform: translateY(-50%) scale(0);
+          transform: translateY(-50%) scale(0);
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
@@ -1843,6 +1843,11 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
   font-family: "Lato", sans-serif;
   color: #ffffff;
   z-index: 10;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  margin: 0 auto;
 }
 @media only screen and (max-width: 1050px) {
   .hero-home__bottom_text {
