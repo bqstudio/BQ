@@ -61,4 +61,3 @@ add_action( 'wp_enqueue_scripts', 'palermo_scripts' );
 require get_template_directory() . '/inc/admin.php';
 require get_template_directory() . '/inc/theme.php';
 require get_template_directory() . '/inc/acf.php';
-require get_template_directory() . '/inc/post.php';

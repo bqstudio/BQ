@@ -10,14 +10,12 @@
     &::before {
         content: '';
         @include absolute();
-        background-image: linear-gradient(to left, rgba(35, 41, 55, 0), #232937);
-        opacity: .6
-    }
-
-    img {
-        height: 100%;
-        display: block;
-        object-fit: cover;
+        background-image: url('images/background.gif');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        width: 100%;
+        position: relative;
     }
 
     &__content {
@@ -53,31 +51,6 @@
         @include responsive('tablet-h') {
             width: 100%;
         }
-
-        .upper_title {
-            color: $white;
-            margin-bottom: 10px;
-            letter-spacing: 5.14px;
-            font-weight: 700;
-
-            @include responsive ('desktop-s') {
-                padding-left: 50px;
-            }
-
-            @include responsive ('tablet-h') {
-                padding-left: 25px;
-            }
-
-            &::before {
-                border-top: 1px solid $white;
-
-                @include responsive ('desktop-s') {
-                    //top: 130%;
-                    left: 0px;
-                }
-
-            }
-        }
     }
 
     &__title {
@@ -90,26 +63,23 @@
         }
     }
 
-    &__text {
-        font-size: 14px;
-        line-height: 1.43;
-        color: $white;
-        font-family: $third-font;
-    }
-
-    form {
-        .gform_footer {
-            padding: 16px 0 0 !important;
-            .gform_button {
-                background-color: $third-color;
-                border-radius: 25px;
-                margin-bottom: 0 !important;
-                font-size: 16px !important;
-
-                &:hover {
-                    background-color: $primary-color !important;
+    .popup {
+        display: none;
+        form {
+            .gform_footer {
+                padding: 16px 0 0 !important;
+                .gform_button {
+                    background-color: $third-color;
+                    border-radius: 25px;
+                    margin-bottom: 0 !important;
+                    font-size: 16px !important;
+    
+                    &:hover {
+                        background-color: $primary-color !important;
+                    }
                 }
             }
         }
     }
+
 }

@@ -2380,15 +2380,12 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: -webkit-gradient(linear, right top, left top, from(rgba(35, 41, 55, 0)), to(#232937));
-  background-image: linear-gradient(to left, rgba(35, 41, 55, 0), #232937);
-  opacity: 0.6;
-}
-.stay_informed img {
-  height: 100%;
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  background-image: url("images/background.gif");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  width: 100%;
+  position: relative;
 }
 .stay_informed__content {
   position: absolute;
@@ -2440,30 +2437,6 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
     width: 100%;
   }
 }
-.stay_informed__text-cont .upper_title {
-  color: #ffffff;
-  margin-bottom: 10px;
-  letter-spacing: 5.14px;
-  font-weight: 700;
-}
-@media only screen and (max-width: 1280px) {
-  .stay_informed__text-cont .upper_title {
-    padding-left: 50px;
-  }
-}
-@media only screen and (max-width: 1050px) {
-  .stay_informed__text-cont .upper_title {
-    padding-left: 25px;
-  }
-}
-.stay_informed__text-cont .upper_title::before {
-  border-top: 1px solid #ffffff;
-}
-@media only screen and (max-width: 1280px) {
-  .stay_informed__text-cont .upper_title::before {
-    left: 0px;
-  }
-}
 .stay_informed__title {
   color: #ffffff;
   line-height: 1;
@@ -2474,22 +2447,19 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
     margin-bottom: 15px;
   }
 }
-.stay_informed__text {
-  font-size: 14px;
-  line-height: 1.43;
-  color: #ffffff;
-  font-family: "Merriweather", serif;
+.stay_informed .popup {
+  display: none;
 }
-.stay_informed form .gform_footer {
+.stay_informed .popup form .gform_footer {
   padding: 16px 0 0 !important;
 }
-.stay_informed form .gform_footer .gform_button {
+.stay_informed .popup form .gform_footer .gform_button {
   background-color: #6A2263;
   border-radius: 25px;
   margin-bottom: 0 !important;
   font-size: 16px !important;
 }
-.stay_informed form .gform_footer .gform_button:hover {
+.stay_informed .popup form .gform_footer .gform_button:hover {
   background-color: #cacaca !important;
 }
 
