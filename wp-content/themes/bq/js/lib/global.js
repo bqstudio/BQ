@@ -24,4 +24,12 @@ jQuery(document).ready(function($){
 		$('.site-menu').fadeToggle();
 	});
 
+	$('.js-popup').on('click', function(){
+		$('.popup').fadeIn();
+	});
+
+	$('.close_popup').on('click', function(){
+		$('.popup').fadeOut();
+	});
+
 });

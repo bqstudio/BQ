@@ -392,6 +392,20 @@ strong * {
   z-index: 1;
 }
 
+.close_popup {
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  z-index: 100;
+  cursor: pointer;
+  background-image: url(images/close-form.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  width: 20px;
+  height: 30px;
+}
+
 .item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -867,14 +881,6 @@ strong * {
 .woocommerce .site .gform_wrapper {
   margin: 0 !important;
   padding: 0 !important;
-}
-.site .gform_wrapper .top_label .gfield_label,
-.site .gform_wrapper legend.gfield_label,
-.woocommerce .gform_wrapper .top_label .gfield_label,
-.woocommerce .gform_wrapper legend.gfield_label,
-.woocommerce .site .gform_wrapper .top_label .gfield_label,
-.woocommerce .site .gform_wrapper legend.gfield_label {
-  display: none !important;
 }
 .site .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
 .site .gform_wrapper textarea,
@@ -2401,32 +2407,8 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
           align-items: center;
 }
 .stay_informed .container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 150px 1fr;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 150px;
   width: 1200px;
   max-width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-@media only screen and (max-width: 1050px) {
-  .stay_informed .container {
-    grid-gap: 80px;
-  }
-}
-@media only screen and (max-width: 900px) {
-  .stay_informed .container {
-    grid-gap: 30px;
-    width: 100%;
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-  }
 }
 .stay_informed__text-cont {
   width: 400px;
@@ -2449,6 +2431,14 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
 }
 .stay_informed .popup {
   display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: black;
+  padding: 100px;
+  z-index: 4;
 }
 .stay_informed .popup form .gform_footer {
   padding: 16px 0 0 !important;

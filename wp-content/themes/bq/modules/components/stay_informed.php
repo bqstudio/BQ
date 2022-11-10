@@ -7,6 +7,7 @@
             </div>
             <?php if ($form_id = get_field('form_id', 'option')): ?> 
                 <div class="popup">
+                    <button class="close_popup"></button>
                     <div class="stay_informed__form" ><?php echo do_shortcode('[gravityform id="'.$form_id.'" title="false" description="false" ajax="true"]'); ?></div>
                 </div>
             <?php endif; ?>
