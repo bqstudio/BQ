@@ -21,7 +21,7 @@
 
     <div class="hero-home__content">
       <div class="container">
-        <?php echo ($title = get_field('title'))? '<div class="hero-home__big_text">'.$title.'</div>':''; ?>
+        <div class="hero-home__big_text"></div>
         <?php echo ($description = get_field('description'))? '<div class="hero-home__bottom_text">'.$description.'</div>':''; ?>
       </div>
       <div class="block-hidden">

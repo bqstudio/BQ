@@ -53,24 +53,29 @@
     
 
     &__big_text {
-        @include h1();
-        font-size: 100px;
-        text-transform: uppercase;
-        color: $white;
-        font-weight: 700;
-        z-index: 10;
+       background-image: url('images/code.svg');
+       background-repeat: no-repeat;
+       background-size: 100%;
+       width: 180px;
+       height: 180px;
+       text-align: center;
+       margin: 0 auto;
+       position: relative;
 
         &::after {
             content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
             border-top: 4px solid $white;
-            width: 150px;
+            width: 100%;
             display: flex;
-            margin: 10px 0 20px 0;
+            margin: 20px 0 10px;
         }
     }
 
     &__bottom_text {
-        @include h4();
+        @include h2();
         color: $white;
         z-index: 10;
         width: fit-content;
