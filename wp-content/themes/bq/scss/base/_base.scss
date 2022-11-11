@@ -22,7 +22,6 @@ body {
   @include default-font();
   font-size: 16px;
   color: $grey-light;
-  background-color: $bg-dark;
 
   img {
     max-width: 100%;
@@ -233,4 +232,3 @@ strong * {
       object-fit: cover;
   }
 }
-

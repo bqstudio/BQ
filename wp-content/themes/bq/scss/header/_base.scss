@@ -74,30 +74,6 @@
     }
   } 
 }
-
-.scrolled {
-  .header {
-    background: transparent;
-    filter: drop-shadow(15px 15px 20px rgba(0, 0, 0, 0.1));
-
-    &__top-bar {
-      display: none;
-    }
-
-    &__middle {
-      padding: 20px 0;
-
-      @include responsive('tablet-h') {
-        padding: 20px;
-      }
-    }
-  }
-}
-
-
-
-
-
 .error_template {
 	padding: 200px 0;
   .page-content {

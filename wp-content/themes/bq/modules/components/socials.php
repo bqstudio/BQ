@@ -1,12 +1,7 @@
 <div class="socials">
-  <?php if (get_field('facebook','option')) { ?>
-    <a href="<?php the_field('facebook','option') ?>" target="_blank" title="Visit our Facebook Page">
-      <?php get_template_part('images/socials/facebook'); ?>
-    </a>
-  <?php }  ?>
-  <?php if (get_field('twitter','option')) { ?>
-    <a href="<?php the_field('twitter','option') ?>" target="_blank" title="Visit our Twitter Page">
-      <?php get_template_part('images/socials/twitter'); ?>
+  <?php if (get_field('mail','option')) { ?>
+    <a href="<?php the_field('mail','option') ?>" target="_blank" title="email">
+      <?php get_template_part('images/socials/email'); ?>
     </a>
   <?php }  ?>
   <?php if (get_field('instagram','option')) { ?>

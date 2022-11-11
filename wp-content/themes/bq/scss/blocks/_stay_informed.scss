@@ -10,10 +10,10 @@
     &::before {
         content: '';
         @include absolute();
-        background-image: url('images/background.gif');
+        background-image: url('images/giphy.gif');
         background-repeat: no-repeat;
         background-size: 100%;
-        background-position: center;
+        background-position: left;
         width: 100%;
         position: relative;
     }

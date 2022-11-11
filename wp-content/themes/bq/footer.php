@@ -18,11 +18,8 @@
 					</div>
 				</div>
 			</div>
-		</div>
-
-		<div class="site-footer__bottom">
+			<div class="site-footer__bottom">
 			<?php get_template_part('modules/components/copyright'); ?>
-			<?php echo ($bottom_text = get_field('bottom_text','option'))? '<div class="footer_text">'.$bottom_text.'</div>':''; ?>
 			<?php if( have_rows('bottom_links', 'options') ): ?>
 				<div class="bottom_links">
 					<?php while( have_rows('bottom_links', 'options') ): the_row(); 
@@ -31,6 +28,7 @@
 					<?php endwhile; ?>
 				</div>
 			<?php endif; ?>
+		</div>
 		</div>
 	</footer><!-- #colophon -->
 

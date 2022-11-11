@@ -229,15 +229,6 @@
   }
 
 }
-.scrolled {
-  .site-menu .submenu--banners {
-    top: 25px;
-  }
-
-  .site-menu .submenu .back-btn {
-    top: 34px;
-  }
-}
 
 .responsive__btn {
   float: left;
@@ -336,12 +327,5 @@
   .header {
     background: $grey !important;
     height: 100%;
-  }
-
-  &.scrolled {
-    .header {
-      background: #EEEEEE;
-      height: 100%;
-    }
   }
 }
