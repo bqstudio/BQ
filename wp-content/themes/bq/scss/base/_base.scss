@@ -57,11 +57,11 @@ h5,.h5,.h5 p {@include h5;}
 h6,.h6,.h6 p {@include h6;}
 
 a {
-  color: $secondary-color; 
+  color: $white; 
   transition: all 0.3s ease;
 
   &:hover {
-    color: $third-color;
+    color: $black;
   }
 }
 
@@ -132,7 +132,7 @@ strong * {
 .upper_title {
   font-size: 18px;
   letter-spacing: 2.7px;
-  color: $secondary-color; 
+  color: $white; 
   text-transform: uppercase;
   position: relative;
   letter-spacing: 2.7px;
@@ -149,7 +149,7 @@ strong * {
     left: -50px;
     width: 32px;
     height: auto;
-    border-top: 1px solid $secondary-color;
+    border-top: 1px solid $white;
 
     @include responsive('tablet-h') {
       width: 16px;
@@ -205,8 +205,8 @@ strong * {
 
 .close_popup{
   position: absolute;
-  right: 2%;
-  top: 2%;
+  right: 20px;
+  top: 10px;
   z-index: 100;
   cursor: pointer;
   background-image: url(images/close-form.svg);

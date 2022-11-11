@@ -1,21 +1,15 @@
 .stay_informed {
     position: relative;
     height: 530px;
+    background-image: url('images/7kmF.gif');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: left;
+    width: 100%;
 
     @include responsive ('tablet-h') {
         height: 500px;
         max-height: 100%;
-    }
-
-    &::before {
-        content: '';
-        @include absolute();
-        background-image: url('images/giphy.gif');
-        background-repeat: no-repeat;
-        background-size: 100%;
-        background-position: left;
-        width: 100%;
-        position: relative;
     }
 
     &__content {
@@ -30,18 +24,14 @@
     }
 
     &__text-cont {
-        width: 400px;
-        max-width: 100%;
-
-        @include responsive('tablet-h') {
-            width: 100%;
-        }
+       text-align: center;
     }
 
     &__title {
         color: $white;
         line-height: 1;
         margin-bottom: 26px;
+        font-size: 40px;
 
         @include responsive('tablet-h') {
             margin-bottom: 15px;
@@ -54,20 +44,21 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background: black;
-        padding: 100px;
+        padding: 50px;
         z-index: 4;
+        background-image: url('images/background-image.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
         form {
             .gform_footer {
                 padding: 16px 0 0 !important;
                 .gform_button {
-                    background-color: $third-color;
                     border-radius: 25px;
                     margin-bottom: 0 !important;
                     font-size: 16px !important;
     
                     &:hover {
-                        background-color: $primary-color !important;
+                        background-color: $black !important;
                     }
                 }
             }

@@ -34,11 +34,12 @@
 					<?php get_template_part('modules/components/site-logo'); ?>
 				</div>
 				<div class="header__top__right">
-					<div tabindex="0" data-block="menu" class="js-open-block responsive__btn" title="Open Menu">
+				<?php get_template_part('modules/components/socials'); ?>
+					<?php /* <div tabindex="0" data-block="menu" class="js-open-block responsive__btn" title="Open Menu">
 						<span></span><span></span><span></span><span></span>
-					</div>
+					</div> */?>
 					<?php get_template_part('modules/components/menu'); ?>
-				</div>
+				</div> 
 			</div>
 		</div>
 	</header>

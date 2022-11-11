@@ -38,10 +38,12 @@
                 @include h4();
                 opacity: 1;
                 padding-bottom: 20px;
+                color: $white;
             }
 
             & > div {
                 font-size: 18px;
+                color: $white;
             }
         }
 

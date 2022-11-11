@@ -29,7 +29,7 @@
         margin-bottom: 10px;
 
         &:hover {
-            color: $secondary-color;
+            color: $white;
         }
     }
 
@@ -39,7 +39,7 @@
         text-decoration: underline;
 
         &:hover {
-            color: $secondary-color;
+            color: $white;
         }
     }
 }
@@ -170,8 +170,8 @@
 
                 &.slick-active {
                     &:before {
-                        border: 1px solid $secondary-color;
-                        background: $secondary-color;
+                        border: 1px solid $white;
+                        background: $white;
                     }
                 }
             }

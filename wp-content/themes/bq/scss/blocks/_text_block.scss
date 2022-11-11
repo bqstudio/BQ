@@ -1,5 +1,10 @@
 .text_block {
-    padding: 20px 214px;
+    padding: 80px 214px;
+    background-image: url('images/background-image.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
 
     @include responsive('tablet-h') {
         padding: 0;
@@ -8,23 +13,5 @@
     &__cont {
         @include text-block();
         width: 100%;
-    }
-}
-
-.page-who-we-are, .page-contact-us   {
-    .text_block {
-        padding: 100px 250px;
-
-        @include responsive('desktop') {
-            padding: 50px 100px;
-        }
-
-        @include responsive('tablet-h') {
-            padding: 50px;
-        }
-
-        @include responsive('mobile-h') {
-            padding: 20px 0;
-        }
     }
 }

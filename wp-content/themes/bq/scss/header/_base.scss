@@ -9,18 +9,6 @@
   z-index: 10;
   background-color: transparent;
 
-  .container {
-    padding: 0 100px;
-
-    @include responsive ('desktop-s') {
-      padding: 0 30px;
-    }
-
-    @include responsive ('mobile-h') {
-      padding: 0 15px;
-    }
-  }
-
   &__top-bar {
     width: 100vw;
     margin-left: -60px;
@@ -82,5 +70,14 @@
     @include responsive('mobile-v') {
       width: 100%;
     }
+  }
+}
+
+body.scrolled {
+  header {
+    background-image: url('images/background-image.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
   }
 }
