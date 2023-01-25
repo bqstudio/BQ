@@ -22,11 +22,7 @@
     <div class="hero-home__content">
       <div class="container">
         <div class="hero-home__big_text"></div>
-        <?php echo ($description = get_field('description'))? '<div class="hero-home__bottom_text">'.$description.'</div>':''; ?>
-      </div>
-      <div class="block-hidden">
-        <h2>Nosotros</h2>
-        <div>Hola somos una empresa joven con amplia experiencia en el desarrollo web. Creemos que hoy en día es fundamental tener un sitio online para potenciar tu emprendimiento, negocio o empresa y para eso estamos para acompañarte en este proceso, focalizando en posicionar tu marca en el mundo digital. </div>
+        <?php echo ($description = get_field('description'))? '<p class="hero-home__bottom_text">'.$description.'</p>':''; ?>
       </div>
     </div>
   </div>

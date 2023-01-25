@@ -1,4 +1,4 @@
-<section class="text_block">
+<section class="text_block" data-aos="fade-right">
     <div class="container_big">
         <?php echo ($text = get_sub_field('text'))? '<div class="text_block__cont">'.$text.'</div>':''; ?>
     </div>
