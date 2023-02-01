@@ -2,7 +2,7 @@
 		</div><!-- #primary -->
 	</div><!-- #content -->
 
-	<?php get_template_part('modules/components/stay_informed'); ?>
+	
 	<footer class="site-footer">
 		<div class="container">
 			<div class="site-footer__cont">
