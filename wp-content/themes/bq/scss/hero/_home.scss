@@ -33,6 +33,12 @@
         margin: 0 auto;
         position: relative;
 
+        @include responsive ('mobile-h') {
+            aspect-ratio: 1;
+            width: 110px;
+            height: auto;
+        }
+
         &::after {
             content: '';
             position: absolute;

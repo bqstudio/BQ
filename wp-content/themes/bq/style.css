@@ -1757,6 +1757,13 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
   margin: 0 auto;
   position: relative;
 }
+@media only screen and (max-width: 750px) {
+  .hero-home__big_text {
+    aspect-ratio: 1;
+    width: 110px;
+    height: auto;
+  }
+}
 .hero-home__big_text::after {
   content: "";
   position: absolute;
@@ -1998,9 +2005,7 @@ body.scrolled header {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  background-image: url("images/background-image.svg");
-  background-repeat: no-repeat;
-  background-size: 100%;
+  background-color: #000;
   width: 100%;
   height: 100%;
 }
@@ -2040,6 +2045,7 @@ body.scrolled header {
 @media only screen and (max-width: 1280px) {
   .site-footer__column .site-logo {
     width: 180px;
+    text-align: center;
   }
 }
 .site-footer__title {
@@ -2107,15 +2113,16 @@ body.scrolled header {
 
 .text_block {
   padding: 80px 214px;
-  background-image: url("images/background-image.svg");
+  /* background-image: url('images/background-image.svg');
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100%; */
   width: 100%;
   height: 100%;
+  background: #2a2a2a;
 }
 @media only screen and (max-width: 1050px) {
   .text_block {
-    padding: 0;
+    padding: 30px 0;
   }
 }
 .text_block__cont {
@@ -2271,7 +2278,7 @@ body.scrolled header {
 .stay_informed {
   position: relative;
   height: 590px;
-  background-image: url("images/Tqv2.gif");
+  background-image: url("images/bg-back.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: left;

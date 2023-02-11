@@ -1,8 +1,9 @@
 .site-footer {
   @include row();
-  background-image: url('images/background-image.svg');
-  background-repeat: no-repeat;
-  background-size: 100%;
+  //background-image: url('images/background-image.svg');
+  //background-repeat: no-repeat;
+  //background-size: 100%;
+background-color: $black;
   width: 100%;
   height: 100%;
 
@@ -32,6 +33,7 @@
       width: 280px;
       @include responsive('desktop-s') {
         width: 180px;
+        text-align: center;
       }
     }
   }
