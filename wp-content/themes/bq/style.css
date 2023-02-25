@@ -440,9 +440,9 @@ strong * {
   width: 80px;
   height: auto;
 }
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1440px) {
   .site-logo img {
-    width: 75px;
+    width: 60px;
   }
 }
 
@@ -901,6 +901,13 @@ strong * {
 .woocommerce .site .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file])::placeholder,
 .woocommerce .site .gform_wrapper textarea::placeholder {
   color: #fff;
+}
+@media only screen and (max-width: 1440px) {
+  .site .gform_wrapper textarea,
+.woocommerce .gform_wrapper textarea,
+.woocommerce .site .gform_wrapper textarea {
+    height: 150px !important;
+  }
 }
 .site .gform_wrapper .gfmc-column,
 .woocommerce .gform_wrapper .gfmc-column,
@@ -2105,7 +2112,7 @@ body.scrolled header {
   margin-right: 10px;
 }
 .site-footer__bottom .bottom_links__item:hover {
-  color: #000;
+  opacity: 0.6;
 }
 .site-footer__bottom .bottom_links__item:nth-last-child(1) {
   margin: 0;
@@ -2329,7 +2336,7 @@ body.scrolled header {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   padding: 50px;
-  z-index: 4;
+  z-index: 15;
   background-image: url("images/background-image.svg");
   background-repeat: no-repeat;
   background-size: cover;
