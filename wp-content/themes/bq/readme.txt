@@ -1,7 +1,6 @@
-=== palermo ===
+=== BQ ===
 
-Contributors: automattic
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Contributors: All
 
 Requires at least: 4.5
 Tested up to: 5.4
