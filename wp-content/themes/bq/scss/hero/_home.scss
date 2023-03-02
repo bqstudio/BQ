@@ -6,10 +6,21 @@
 
     video {
         width: 100%;
+
+        @include responsive ("mobile-h") {
+            min-height: 600px;
+            object-fit: cover;
+        }
     }
 
     &::before {
         @include overlay();
+    }
+
+    &__cont {
+        @include responsive ("mobile-h") {
+            min-height: 600px;
+        }
     }
 
     &__content {
@@ -33,10 +44,14 @@
         margin: 0 auto;
         position: relative;
 
-        @include responsive ('mobile-h') {
+        @include responsive ('tablet-h') {
             aspect-ratio: 1;
-            width: 110px;
+            width: 120px;
             height: auto;
+        }
+
+        @include responsive ('mobile-h') {
+            width: 110px;
         }
 
         &::after {

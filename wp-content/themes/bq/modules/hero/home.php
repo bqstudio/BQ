@@ -1,5 +1,4 @@
-<section class="hero-home">        
-  <div class="hero-home__cont">
+<section class="hero-home">
     <?php $media_type = get_field('media_type');?>
     <?php if ($media_type == ('video_file') && $video_file = get_field('video_file')): ?>
       <div class="hero-home__cont">
@@ -25,5 +24,4 @@
         <?php echo ($description = get_field('description'))? '<p class="hero-home__bottom_text">'.$description.'</p>':''; ?>
       </div>
     </div>
-  </div>
 </section>

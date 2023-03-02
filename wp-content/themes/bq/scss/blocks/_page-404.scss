@@ -1,0 +1,53 @@
+.error-404 {
+	padding-top: 260px;
+    height: 42vw;
+	text-align: center;
+	background-color: $bg-dark;
+
+	@include responsive ("tablet-h") {
+		height: 60vw;
+	}
+
+	@include responsive ("mobile-h") {
+		height: 130vw;
+	}
+
+	@include responsive ("mobile-s") {
+		height: 145vw;
+	}
+}
+
+.page-header {
+	display: flex;
+	flex-direction: column;
+	grid-gap: 20px;
+	align-items: center;
+	justify-content: center;
+}
+
+.page-title {
+	color: $grey-light-third;
+	font-weight: 700;
+	font-size: 55px;
+	color: #dfdfdf;
+
+	@include responsive ("tablet-h") {
+		font-size: 32px;
+	}
+
+	@include responsive ("mobile-h") {
+		font-size: 18px;
+	}
+}
+
+@include responsive ("tablet-h") {
+	.error-404 h2 {
+		font-size: 70px;
+	}
+}
+
+@include responsive ("tablet-h") {
+	.error-404 p {
+		text-align: center;
+	}
+}

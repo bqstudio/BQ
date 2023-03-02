@@ -47,6 +47,19 @@ class Util
     }
 
     /**
+     * Gets the global plugin meta info
+     *
+     * @return array
+     **/
+    public static function getPluginMeta()
+    {
+        if (self::isPro()) {
+            return $GLOBALS['wpmdb_meta']['wp-migrate-db-pro'];
+        }
+        return $GLOBALS['wpmdb_meta']['wp-migrate-db'];
+    }
+
+    /**
      * Has a specific method been called in the stack trace.
      *
      * @param string     $method
@@ -602,7 +615,7 @@ class Util
      *
      * @return string
      */
-    function slash_one_direction($path)
+    public static function slash_one_direction($path)
     {
         return str_replace(array('/', '\\'), DIRECTORY_SEPARATOR, $path);
     }
@@ -612,7 +625,7 @@ class Util
      *
      * @return string
      */
-    function get_absolute_root_file_path()
+    public static function get_absolute_root_file_path()
     {
         static $absolute_path;
 
@@ -737,10 +750,10 @@ class Util
 
     /**
      * Returns an associative array of html escaped useful information about the site.
-     *
+     * @param array $state_data
      * @return array
      */
-    public function site_details()
+    public function site_details($state_data = [])
     {
         global $wpdb;
         $table_prefix = $wpdb->base_prefix;
@@ -758,10 +771,11 @@ class Util
             'subsites_info'                 => $this->subsites_info(),
             'is_subdomain_install'          => esc_html((is_multisite() && is_subdomain_install()) ? 'true' : 'false'),
             'high_performance_transfers'    => (bool)Settings::get_setting('high_performance_transfers'),
-            'theoreticalTransferBottleneck' => apply_filters('wpmdb_theoretical_transfer_bottleneck', 0)
+            'theoreticalTransferBottleneck' => apply_filters('wpmdb_theoretical_transfer_bottleneck', 0),
+            'firewall_plugins'              => $this->get_active_firewall_plugins()
         );
 
-        $site_details = apply_filters('wpmdb_site_details', $site_details);
+        $site_details = apply_filters('wpmdb_site_details', $site_details, $state_data);
 
         return $site_details;
     }
@@ -773,7 +787,7 @@ class Util
      */
     public function get_short_uploads_dir()
     {
-        $short_path = str_replace($this->get_absolute_root_file_path(), '', $this->filesystem->get_upload_info('path'));
+        $short_path = str_replace(self::get_absolute_root_file_path(), '', $this->filesystem->get_upload_info('path'));
 
         return trailingslashit(substr(str_replace('\\', '/', $short_path), 1));
     }
@@ -814,6 +828,27 @@ class Util
         }
 
         return $bytes;
+    }
+
+    /**
+     * Get active firewall plugins
+     *
+     * @return array
+     **/
+    protected function get_active_firewall_plugins()
+    {
+        $waf_plugins = [
+            'wp-defender/wp-defender.php',
+            'wordfence/wordfence.php'
+        ];
+        $local_plugins = $this->filesystem->get_local_plugins();
+        $active_waf = [];
+        foreach($local_plugins as $key=> $plugin) {
+            if(in_array($key, $waf_plugins) && true === $plugin[0]['active']) {
+                $active_waf[$key] = $plugin;
+            }
+        }
+        return $active_waf;
     }
 
 
@@ -1353,5 +1388,32 @@ class Util
         }
 
         return true;
+    }
+
+    /**
+     * Gets the directory for each stage
+     * Defaults to uploads dir if no match
+     * 
+     * @param string $stage
+     * @return string
+     **/
+    public static function get_stage_base_dir($stage)
+    {
+        $wp_upload_dir = wp_upload_dir();
+        $dirs          = [
+            'media_files'     => $wp_upload_dir['basedir'],
+            'theme_files'     => WP_CONTENT_DIR . DIRECTORY_SEPARATOR . 'themes',
+            'themes'          => WP_CONTENT_DIR . DIRECTORY_SEPARATOR . 'themes',
+            'plugin_files'    => WP_PLUGIN_DIR,
+            'plugins'         => WP_PLUGIN_DIR,
+            'mu_plugin_files' => WPMU_PLUGIN_DIR,
+            'muplugins'       => WPMU_PLUGIN_DIR,
+            'other_files'     => WP_CONTENT_DIR,
+            'others'          => WP_CONTENT_DIR,
+            'core_files'      => ABSPATH ,
+            'core'            => ABSPATH
+        ];
+        $stage = in_array($stage, array_keys($dirs)) ? $stage : 'media_files';
+        return self::slash_one_direction($dirs[$stage]);
     }
 }
