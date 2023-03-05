@@ -2317,7 +2317,7 @@ body.scrolled header {
 @media only screen and (max-width: 750px) {
   .stay_informed {
     background-size: 350%;
-    height: 400px;
+    height: 300px;
   }
 }
 .stay_informed__content {
@@ -2349,13 +2349,12 @@ body.scrolled header {
 }
 @media only screen and (max-width: 1050px) {
   .stay_informed__title {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
   }
 }
 @media only screen and (max-width: 750px) {
   .stay_informed__title {
     font-size: 36px;
-    margin-bottom: 30px;
   }
 }
 .stay_informed .popup {

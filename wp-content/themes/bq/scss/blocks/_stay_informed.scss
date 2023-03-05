@@ -18,7 +18,7 @@
 
     @include responsive ('mobile-h') {
         background-size: 350%;
-        height: 400px;
+        height: 300px;
     }
 
     &__content {
@@ -33,7 +33,7 @@
     }
 
     &__text-cont {
-       text-align: center;
+        text-align: center;
     }
 
     &__title {
@@ -44,12 +44,11 @@
         letter-spacing: 1px;
 
         @include responsive('tablet-h') {
-            margin-bottom: 15px;
+            margin-bottom: 30px;
         }
 
         @include responsive('mobile-h') {
             font-size: 36px;
-            margin-bottom: 30px;
         }
     }
 
