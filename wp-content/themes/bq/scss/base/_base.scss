@@ -215,6 +215,10 @@ strong * {
   background-color: transparent;
   width: 20px;
   height: 30px; 
+
+  @include responsive ('mobile-v') {
+      top: 30px;
+  }
 }
 
 .item {
@@ -231,4 +235,10 @@ strong * {
   img {
       object-fit: cover;
   }
+}
+
+.gform_wrapper.gravity-theme .gfield textarea.large {
+    @include responsive ('mobile-v') {
+        height: 150px !important;
+    }
 }

@@ -404,6 +404,11 @@ strong * {
   width: 20px;
   height: 30px;
 }
+@media only screen and (max-width: 600px) {
+  .close_popup {
+    top: 30px;
+  }
+}
 
 .item {
   display: -webkit-box;
@@ -425,6 +430,12 @@ strong * {
 .item img {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media only screen and (max-width: 600px) {
+  .gform_wrapper.gravity-theme .gfield textarea.large {
+    height: 150px !important;
+  }
 }
 
 .site-logo {
