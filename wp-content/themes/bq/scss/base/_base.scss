@@ -225,11 +225,11 @@ strong * {
   display: flex;
   align-items: center;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-  background-color: #fff;
+  background-color: $white;
   padding: 70px 60px;
 
   @include responsive('tablet-h') {
-      padding: 30px;
+      padding: 35px;
   }
 
   img {

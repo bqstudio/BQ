@@ -424,7 +424,7 @@ strong * {
 }
 @media only screen and (max-width: 1050px) {
   .item {
-    padding: 30px;
+    padding: 35px;
   }
 }
 .item img {
