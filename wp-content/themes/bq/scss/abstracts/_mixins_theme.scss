@@ -136,6 +136,11 @@
   &::placeholder {
     color: $white;
   }
+
+  @include responsive ('desktop') {
+    height: 40px;
+    line-height: 40px;
+  }
 }
 
 @mixin overlay() {

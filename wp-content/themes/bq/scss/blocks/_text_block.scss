@@ -7,7 +7,7 @@
     height: 100%;
     background: $bg-dark;
 
-    @include responsive('tablet-h') {
+    @include responsive('desktop') {
         padding: 60px 0;
         margin-top: -1px;
     }

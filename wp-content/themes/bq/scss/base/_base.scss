@@ -238,7 +238,7 @@ strong * {
 }
 
 .gform_wrapper.gravity-theme .gfield textarea.large {
-    @include responsive ('mobile-v') {
+    @include responsive ('desktop') {
         height: 150px !important;
     }
 }

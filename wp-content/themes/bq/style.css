@@ -432,7 +432,7 @@ strong * {
      object-fit: cover;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1440px) {
   .gform_wrapper.gravity-theme .gfield textarea.large {
     height: 150px !important;
   }
@@ -903,6 +903,17 @@ strong * {
 .woocommerce .site .gform_wrapper textarea::placeholder {
   color: #fff;
 }
+@media only screen and (max-width: 1440px) {
+  .site .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+.site .gform_wrapper textarea,
+.woocommerce .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+.woocommerce .gform_wrapper textarea,
+.woocommerce .site .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+.woocommerce .site .gform_wrapper textarea {
+    height: 40px;
+    line-height: 40px;
+  }
+}
 .site .gform_wrapper .gfmc-column,
 .woocommerce .gform_wrapper .gfmc-column,
 .woocommerce .site .gform_wrapper .gfmc-column {
@@ -1216,6 +1227,13 @@ strong * {
 .formBox input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file])::placeholder,
 .formBox textarea::placeholder {
   color: #fff;
+}
+@media only screen and (max-width: 1440px) {
+  .formBox input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+.formBox textarea {
+    height: 40px;
+    line-height: 40px;
+  }
 }
 .formBox p {
   font-size: 12px;
@@ -2142,7 +2160,7 @@ body.scrolled header {
   height: 100%;
   background: #2a2a2a;
 }
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1440px) {
   .text_block {
     padding: 60px 0;
     margin-top: -1px;
