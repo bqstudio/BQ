@@ -1312,6 +1312,10 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
   left: -9000px;
 }
 
+.ginput_recaptcha {
+  display: none;
+}
+
 .post-cont .post-thumbnail {
   width: 100%;
   padding-top: 67.25%;
