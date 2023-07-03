@@ -1,11 +1,36 @@
+@charset "UTF-8";
 /*
 Theme Name: bq 
 Text Domain: twentysixteen
+*/
+/*
+tr( duracion, propiedades, delay)
+*/
+/*
+tre( duracion, propiedades, delay)
+a diferencia de tr(), tre tiene un easign aplicado que hace la animacion mas natural
+*/
+/*
+fade( x, y );
+Añade transformacion x e y, y opacity 0 al elemento.
+Se pueden pasar valores negativos, por ejemplo, para desplazar x hacia la izquierda
+Tambien se puede pasar un porcentaje
 */
 @import url("https://fonts.googleapis.com/css2?family=Rosario:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;0,900;1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;1,400&display=swap");
+.in {
+  --fade-opacity: 1;
+  --fade-transform: translateX(0px) translateY(0px);
+  --p100: 100%;
+  --v1: 1;
+}
+
+/*
+fadein();
+Aplica transformX(0px), transformY(0px) y opacity 1 para hacer aparecer el objecto
+*/
 .image-background {
   position: absolute;
   top: 0;
@@ -865,21 +890,21 @@ strong * {
 }
 @media only screen and (max-width: 1050px) {
   .site .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
-.site .gform_wrapper textarea,
-.woocommerce .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
-.woocommerce .gform_wrapper textarea,
-.woocommerce .site .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
-.woocommerce .site .gform_wrapper textarea {
+  .site .gform_wrapper textarea,
+  .woocommerce .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+  .woocommerce .gform_wrapper textarea,
+  .woocommerce .site .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+  .woocommerce .site .gform_wrapper textarea {
     font-size: 16px;
   }
 }
 @media only screen and (max-width: 600px) {
   .site .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
-.site .gform_wrapper textarea,
-.woocommerce .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
-.woocommerce .gform_wrapper textarea,
-.woocommerce .site .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
-.woocommerce .site .gform_wrapper textarea {
+  .site .gform_wrapper textarea,
+  .woocommerce .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+  .woocommerce .gform_wrapper textarea,
+  .woocommerce .site .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+  .woocommerce .site .gform_wrapper textarea {
     font-size: 16px;
   }
 }
@@ -905,11 +930,11 @@ strong * {
 }
 @media only screen and (max-width: 1440px) {
   .site .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
-.site .gform_wrapper textarea,
-.woocommerce .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
-.woocommerce .gform_wrapper textarea,
-.woocommerce .site .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
-.woocommerce .site .gform_wrapper textarea {
+  .site .gform_wrapper textarea,
+  .woocommerce .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+  .woocommerce .gform_wrapper textarea,
+  .woocommerce .site .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+  .woocommerce .site .gform_wrapper textarea {
     height: 40px;
     line-height: 40px;
   }
@@ -933,15 +958,15 @@ strong * {
 }
 @media only screen and (max-width: 1050px) {
   .site .gform_wrapper .gfmc-column h4,
-.woocommerce .gform_wrapper .gfmc-column h4,
-.woocommerce .site .gform_wrapper .gfmc-column h4 {
+  .woocommerce .gform_wrapper .gfmc-column h4,
+  .woocommerce .site .gform_wrapper .gfmc-column h4 {
     font-size: 16px;
   }
 }
 @media only screen and (max-width: 600px) {
   .site .gform_wrapper .gfmc-column h4,
-.woocommerce .gform_wrapper .gfmc-column h4,
-.woocommerce .site .gform_wrapper .gfmc-column h4 {
+  .woocommerce .gform_wrapper .gfmc-column h4,
+  .woocommerce .site .gform_wrapper .gfmc-column h4 {
     font-size: 16px;
   }
 }
@@ -954,15 +979,15 @@ strong * {
 }
 @media only screen and (max-width: 1050px) {
   .site .gform_wrapper .gfmc-column .form__text,
-.woocommerce .gform_wrapper .gfmc-column .form__text,
-.woocommerce .site .gform_wrapper .gfmc-column .form__text {
+  .woocommerce .gform_wrapper .gfmc-column .form__text,
+  .woocommerce .site .gform_wrapper .gfmc-column .form__text {
     font-size: 12px;
   }
 }
 @media only screen and (max-width: 600px) {
   .site .gform_wrapper .gfmc-column .form__text,
-.woocommerce .gform_wrapper .gfmc-column .form__text,
-.woocommerce .site .gform_wrapper .gfmc-column .form__text {
+  .woocommerce .gform_wrapper .gfmc-column .form__text,
+  .woocommerce .site .gform_wrapper .gfmc-column .form__text {
     font-size: 12px;
   }
 }
@@ -1019,33 +1044,33 @@ strong * {
 }
 @media only screen and (max-width: 1050px) {
   .site .gform_wrapper .gform_footer input.button,
-.site .gform_wrapper .gform_footer input[type=submit],
-.site .gform_wrapper .gform_page_footer input.button,
-.site .gform_wrapper .gform_page_footer input[type=submit],
-.woocommerce .gform_wrapper .gform_footer input.button,
-.woocommerce .gform_wrapper .gform_footer input[type=submit],
-.woocommerce .gform_wrapper .gform_page_footer input.button,
-.woocommerce .gform_wrapper .gform_page_footer input[type=submit],
-.woocommerce .site .gform_wrapper .gform_footer input.button,
-.woocommerce .site .gform_wrapper .gform_footer input[type=submit],
-.woocommerce .site .gform_wrapper .gform_page_footer input.button,
-.woocommerce .site .gform_wrapper .gform_page_footer input[type=submit] {
+  .site .gform_wrapper .gform_footer input[type=submit],
+  .site .gform_wrapper .gform_page_footer input.button,
+  .site .gform_wrapper .gform_page_footer input[type=submit],
+  .woocommerce .gform_wrapper .gform_footer input.button,
+  .woocommerce .gform_wrapper .gform_footer input[type=submit],
+  .woocommerce .gform_wrapper .gform_page_footer input.button,
+  .woocommerce .gform_wrapper .gform_page_footer input[type=submit],
+  .woocommerce .site .gform_wrapper .gform_footer input.button,
+  .woocommerce .site .gform_wrapper .gform_footer input[type=submit],
+  .woocommerce .site .gform_wrapper .gform_page_footer input.button,
+  .woocommerce .site .gform_wrapper .gform_page_footer input[type=submit] {
     font-size: 12px;
   }
 }
 @media only screen and (max-width: 600px) {
   .site .gform_wrapper .gform_footer input.button,
-.site .gform_wrapper .gform_footer input[type=submit],
-.site .gform_wrapper .gform_page_footer input.button,
-.site .gform_wrapper .gform_page_footer input[type=submit],
-.woocommerce .gform_wrapper .gform_footer input.button,
-.woocommerce .gform_wrapper .gform_footer input[type=submit],
-.woocommerce .gform_wrapper .gform_page_footer input.button,
-.woocommerce .gform_wrapper .gform_page_footer input[type=submit],
-.woocommerce .site .gform_wrapper .gform_footer input.button,
-.woocommerce .site .gform_wrapper .gform_footer input[type=submit],
-.woocommerce .site .gform_wrapper .gform_page_footer input.button,
-.woocommerce .site .gform_wrapper .gform_page_footer input[type=submit] {
+  .site .gform_wrapper .gform_footer input[type=submit],
+  .site .gform_wrapper .gform_page_footer input.button,
+  .site .gform_wrapper .gform_page_footer input[type=submit],
+  .woocommerce .gform_wrapper .gform_footer input.button,
+  .woocommerce .gform_wrapper .gform_footer input[type=submit],
+  .woocommerce .gform_wrapper .gform_page_footer input.button,
+  .woocommerce .gform_wrapper .gform_page_footer input[type=submit],
+  .woocommerce .site .gform_wrapper .gform_footer input.button,
+  .woocommerce .site .gform_wrapper .gform_footer input[type=submit],
+  .woocommerce .site .gform_wrapper .gform_page_footer input.button,
+  .woocommerce .site .gform_wrapper .gform_page_footer input[type=submit] {
     font-size: 12px;
   }
 }
@@ -1064,21 +1089,21 @@ strong * {
 }
 @media only screen and (max-width: 1050px) {
   .site .gform_wrapper li.gfield.gfield_error,
-.site .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning,
-.woocommerce .gform_wrapper li.gfield.gfield_error,
-.woocommerce .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning,
-.woocommerce .site .gform_wrapper li.gfield.gfield_error,
-.woocommerce .site .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+  .site .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning,
+  .woocommerce .gform_wrapper li.gfield.gfield_error,
+  .woocommerce .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning,
+  .woocommerce .site .gform_wrapper li.gfield.gfield_error,
+  .woocommerce .site .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
     font-size: 12px;
   }
 }
 @media only screen and (max-width: 600px) {
   .site .gform_wrapper li.gfield.gfield_error,
-.site .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning,
-.woocommerce .gform_wrapper li.gfield.gfield_error,
-.woocommerce .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning,
-.woocommerce .site .gform_wrapper li.gfield.gfield_error,
-.woocommerce .site .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+  .site .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning,
+  .woocommerce .gform_wrapper li.gfield.gfield_error,
+  .woocommerce .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning,
+  .woocommerce .site .gform_wrapper li.gfield.gfield_error,
+  .woocommerce .site .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
     font-size: 12px;
   }
 }
@@ -1098,15 +1123,15 @@ strong * {
 }
 @media only screen and (max-width: 1050px) {
   .site .gform_wrapper div.validation_error,
-.woocommerce .gform_wrapper div.validation_error,
-.woocommerce .site .gform_wrapper div.validation_error {
+  .woocommerce .gform_wrapper div.validation_error,
+  .woocommerce .site .gform_wrapper div.validation_error {
     font-size: 12px;
   }
 }
 @media only screen and (max-width: 600px) {
   .site .gform_wrapper div.validation_error,
-.woocommerce .gform_wrapper div.validation_error,
-.woocommerce .site .gform_wrapper div.validation_error {
+  .woocommerce .gform_wrapper div.validation_error,
+  .woocommerce .site .gform_wrapper div.validation_error {
     font-size: 12px;
   }
 }
@@ -1136,21 +1161,21 @@ strong * {
 }
 @media only screen and (max-width: 1050px) {
   .site .gform_wrapper ul.gfield_checkbox li label,
-.site .gform_wrapper ul.gfield_radio li label,
-.woocommerce .gform_wrapper ul.gfield_checkbox li label,
-.woocommerce .gform_wrapper ul.gfield_radio li label,
-.woocommerce .site .gform_wrapper ul.gfield_checkbox li label,
-.woocommerce .site .gform_wrapper ul.gfield_radio li label {
+  .site .gform_wrapper ul.gfield_radio li label,
+  .woocommerce .gform_wrapper ul.gfield_checkbox li label,
+  .woocommerce .gform_wrapper ul.gfield_radio li label,
+  .woocommerce .site .gform_wrapper ul.gfield_checkbox li label,
+  .woocommerce .site .gform_wrapper ul.gfield_radio li label {
     font-size: 12px;
   }
 }
 @media only screen and (max-width: 600px) {
   .site .gform_wrapper ul.gfield_checkbox li label,
-.site .gform_wrapper ul.gfield_radio li label,
-.woocommerce .gform_wrapper ul.gfield_checkbox li label,
-.woocommerce .gform_wrapper ul.gfield_radio li label,
-.woocommerce .site .gform_wrapper ul.gfield_checkbox li label,
-.woocommerce .site .gform_wrapper ul.gfield_radio li label {
+  .site .gform_wrapper ul.gfield_radio li label,
+  .woocommerce .gform_wrapper ul.gfield_checkbox li label,
+  .woocommerce .gform_wrapper ul.gfield_radio li label,
+  .woocommerce .site .gform_wrapper ul.gfield_checkbox li label,
+  .woocommerce .site .gform_wrapper ul.gfield_radio li label {
     font-size: 12px;
   }
 }
@@ -1202,13 +1227,13 @@ strong * {
 }
 @media only screen and (max-width: 1050px) {
   .formBox input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
-.formBox textarea {
+  .formBox textarea {
     font-size: 16px;
   }
 }
 @media only screen and (max-width: 600px) {
   .formBox input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
-.formBox textarea {
+  .formBox textarea {
     font-size: 16px;
   }
 }
@@ -1230,7 +1255,7 @@ strong * {
 }
 @media only screen and (max-width: 1440px) {
   .formBox input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
-.formBox textarea {
+  .formBox textarea {
     height: 40px;
     line-height: 40px;
   }
@@ -2328,7 +2353,6 @@ body.scrolled header {
   float: right;
   margin-left: 30px;
 }
-
 .stay_informed {
   position: relative;
   height: 590px;
@@ -2814,5 +2838,80 @@ body.scrolled header {
   .error-404 p {
     text-align: center;
   }
+}
+.grid_banner {
+  background-color: #2a2a2a;
+  padding: 60px 0;
+}
+.grid_banner__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.grid_banner__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.grid_banner__title {
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 26px;
+  font-size: 40px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+@media only screen and (max-width: 1050px) {
+  .grid_banner__title {
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .grid_banner__title {
+    font-size: 36px;
+  }
+}
+.grid_banner__item {
+  aspect-ratio: 1;
+  min-height: 300px;
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.grid_banner__item .image-background {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.grid_banner__item img {
+  max-width: 150px;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.grid_banner__link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 3;
+  border: 3px solid #cacaca;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.grid_banner__link:hover {
+  border: 3px solid #b6d133;
 }
 /*# sourceMappingURL=style.css.map */
