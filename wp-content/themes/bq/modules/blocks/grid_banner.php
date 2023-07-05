@@ -3,12 +3,18 @@
         <div class="container">
             <?php echo ($title = get_sub_field('title'))? '<div class="grid_banner__title h1">'.$title.'</div>':'';?>
             <div class="grid_banner__grid">
-                <div class="grid_banner__item">
-                    <div class="image-background">
-                        <img src="<?php echo get_template_directory_uri();?>/images/staff.jpg">
+                <?php if($proyectos = get_sub_field('proyectos')):?>
+                    <div class="grid_banner__grid">
+                        <?php foreach( $proyectos as $post ): 
+                            setup_postdata($post); 
+                            $link = get_field('link')?>
+                            <a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="grid_banner__item">
+                                <div class="image-background"><?php the_post_thumbnail(); ?></div>
+                                <div class="grid_banner__link"><?php the_title(); ?></div>
+                            </a>
+                        <?php endforeach; wp_reset_postdata(); ?>
                     </div>
-                <a href="#" class="grid_banner__link"></a>
-                </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>
