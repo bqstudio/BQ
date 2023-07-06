@@ -39,8 +39,11 @@
         aspect-ratio: 0.8;
         min-height: 200px;
         position: relative;
-        
         transition: all .3s ease-in-out;
+
+        @include responsive('mobile-v') {
+            min-height: 100px;
+        }
 
         .image-background {
             display: flex;
@@ -52,6 +55,10 @@
             max-width: 150px;
             height: auto;
             object-fit: cover;
+        }
+
+        &:hover {
+            transform: translateY(-10px);
         }
     }
 }

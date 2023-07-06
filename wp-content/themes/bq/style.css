@@ -2898,6 +2898,11 @@ body.scrolled header {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+@media only screen and (max-width: 600px) {
+  .grid_banner__item {
+    min-height: 100px;
+  }
+}
 .grid_banner__item .image-background {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2914,5 +2919,9 @@ body.scrolled header {
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.grid_banner__item:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 /*# sourceMappingURL=style.css.map */
