@@ -10,7 +10,7 @@
                             $link = get_field('link')?>
                             <a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="grid_banner__item">
                                 <div class="image-background"><?php the_post_thumbnail(); ?></div>
-                               <!--  <div class="grid_banner__link"><?php //the_title(); ?></div> -->
+                               <?php /* <div class="grid_banner__link"><?php the_title(); ?></div> */ ?>
                             </a>
                         <?php endforeach; wp_reset_postdata(); ?>
                     </div>
