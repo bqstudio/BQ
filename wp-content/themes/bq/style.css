@@ -127,7 +127,7 @@ body ul li {
   list-style: none;
 }
 body p {
-  font-family: "Merriweather", serif;
+  font-family: "Lato", sans-serif;
 }
 
 section {
@@ -2874,10 +2874,8 @@ body.scrolled header {
   }
 }
 .grid_banner__title {
-  color: #fff;
+  color: #cacaca;
   line-height: 1;
-  margin-bottom: 26px;
-  font-size: 40px;
   letter-spacing: 1px;
   text-align: center;
 }
@@ -2928,5 +2926,36 @@ body.scrolled header {
 .grid_banner__item:hover {
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
+}
+
+.logos {
+  padding: 60px 0;
+  background-color: #2a2a2a;
+}
+.logos__title {
+  text-align: center;
+  color: #cacaca;
+  margin-bottom: 20px;
+}
+.logos__cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  gap: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.logos__item img {
+  max-width: 70px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 /*# sourceMappingURL=style.css.map */

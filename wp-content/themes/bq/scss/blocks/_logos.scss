@@ -1,0 +1,26 @@
+.logos {
+    padding: 60px 0;
+    background-color: $bg-dark;
+
+    &__title {
+        text-align: center;
+        color: $primary-color;
+        margin-bottom: 20px;
+    }
+
+    &__cont {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__item {
+
+        img {
+            max-width: 70px;
+            object-fit: contain;
+        }
+    }
+}

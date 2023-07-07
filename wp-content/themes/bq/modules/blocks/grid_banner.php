@@ -1,7 +1,7 @@
 <section class="grid_banner">
     <div class="grid_banner__content" data-aos="fade-right">
         <div class="container">
-            <?php echo ($title = get_sub_field('title'))? '<div class="grid_banner__title h1">'.$title.'</div>':'';?>
+            <?php echo ($title = get_sub_field('title'))? '<h2 class="grid_banner__title h1">'.$title.'</div>':'';?>
             
                 <?php if($proyectos = get_sub_field('proyectos')):?>
                     <div class="grid_banner__grid">

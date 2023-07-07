@@ -1,4 +1,4 @@
-<section class="logos">
+<section class="logos" data-waypoint='.25'>
     <div class="container">
         <?php echo ($title = get_sub_field('title'))? '<div class="logos__title h1">'.$title.'</div>':'';
         echo ($text = get_sub_field('text'))? '<div class="logos__text">'.$text.'</div>':'';
